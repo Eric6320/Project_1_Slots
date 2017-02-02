@@ -14,20 +14,20 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.ejtho.project_1_slots.MainActivity">
 
-
+    <!--Instructions-->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:id="@+id/instructions"
         android:layout_weight="1">
 
-        <!--TODO Scale text size?-->
         <TextView
             android:text="1$ a Play"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:id="@+id/payToPlay"
+            android:gravity="center"
             android:textSize="32dp"
             android:layout_weight="1" />
 
@@ -37,35 +37,42 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/rules"
+            android:layout_gravity="center"
             android:layout_weight="1">
 
             <TextView
                 android:text="Match 0 - lose $1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="23dp"
                 android:id="@+id/matchZero" />
 
             <TextView
                 android:text="Match 2 - win $2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="23dp"
                 android:id="@+id/matchOne" />
 
             <TextView
                 android:text="Match 3 - win $3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="23dp"
                 android:id="@+id/matchTwo" />
 
         </LinearLayout>
     </LinearLayout>
 
+    <!--Flowers-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:id="@+id/flowerRow"
         android:layout_weight="1"
-        android:layout_gravity="center">
+        android:layout_gravity="top">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -90,28 +97,65 @@
 
     </LinearLayout>
 
+    <!--Go Button-->
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:paddingTop="10dp"
         android:layout_weight="1"
+        android:layout_gravity="center"
         android:id="@+id/goAndResetRow" >
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
             app:srcCompat="@drawable/go"
-            android:id="@+id/imageButton"
+            android:id="@+id/goButton"
             android:layout_weight="1" />
+    </LinearLayout>
+
+    <!--Coin and Reset Button-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_weight="1"
+        android:paddingTop="40dp"
+        android:id="@+id/coinAndResetRow">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/coinAndMoney"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/dol"
+                android:id="@+id/coinImage"
+                android:layout_weight="1" />
+
+            <!--TODO change text to update total-->
+            <TextView
+                android:text="$5"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/dollarAmount"
+                android:textSize="32dp"
+                android:textColor="#FFD700"
+                android:gravity="center_vertical"
+                android:layout_weight="1" />
+
+        </LinearLayout>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:
             app:srcCompat="@drawable/reset1"
-            android:id="@+id/imageView4"
+            android:id="@+id/resetButton"
             android:layout_weight="1" />
     </LinearLayout>
 
